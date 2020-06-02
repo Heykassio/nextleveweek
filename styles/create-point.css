@@ -1,0 +1,124 @@
+#create-point-page{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#create-point-page header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#create-point-page header a{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+#create-point-page header a span{
+    background: url('../assets/arrow-left.svg');
+    height: 24px;
+    width: 20px;
+    display: flex;
+    margin-right: 16px;
+}
+
+/* **Form ** */
+
+form{
+    background-color: white;
+    padding: 64px;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 80px;
+    max-width: 730px;
+    box-sizing: border-box;
+}
+form h1{
+    font-size: 36px;
+}
+form fieldset{
+    margin-top: 64px;
+    border: none;
+}
+
+form legend{
+    margin-bottom: 40px;
+}
+
+form legend h2{
+    font-size: 24px;
+}
+
+form .field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+form .field-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+form input,
+form select{
+    background-color: #f0f0f5;
+    border: none;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field{
+    margin-left: 24px;
+}
+
+#number{
+    max-width: 150px;
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+    border: none;
+    background-color: var(--primary-color);
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 46px;
+    cursor: pointer;
+    transition: background-color 400ms;
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
+/* form button{
+    width: 100%;
+    max-width: 200px;
+    background: var(--primary-color);
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    transition: 400ms;
+    color: aliceblue;
+    font-weight: bold;
+} */
