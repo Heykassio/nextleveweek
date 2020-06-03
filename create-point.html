@@ -23,7 +23,7 @@
             </a>
         </header>
         <form action="">
-            <h1>Cadastrar <br> ponto de coleta</h1>
+            <h1>Cadastro do<br> ponto de coleta</h1>
 
             <fieldset>
                 <legend>
@@ -31,22 +31,22 @@
                 </legend>
                 <div class="field">
                     <label for="name">Nome da entidade</label>
-                    <input type="text" name="name">
+                    <input type="text" name="name" required>
                 </div>
                 <div class="field-group">
                     <div class="field">
                         <label for="address">Endereço</label>
-                        <input type="text" name="address">
+                        <input type="text" name="address" required>
                     </div>
                     <div class="field" id="number">
                         <label for="address-number" >Número</label>
-                        <input type="text" name="address-number">
+                        <input type="text" name="address-number" required>
                     </div>
                 </div>
                 <div class="field-group">
                     <div class="field">
                         <label for="uf">Estado</label>
-                        <select name="uf">
+                        <select name="uf" required>
                             <option value="">Selecione o Estado</option>
                         </select>
 
@@ -54,7 +54,7 @@
                     </div>
                     <div class="field">
                         <label for="city">Cidade</label>
-                        <select name="city" disabled>
+                        <select name="city" disabled required>
                             <option value="">Selecione a Cidade</option>
                         </select>
                     </div>
@@ -64,7 +64,35 @@
             <fieldset>
                 <legend>
                     <h2>Itens de coleta</h2>
+                    <p>Selecione um ou mais itens abaixo</p>
                 </legend>
+                <div class="items-grid">
+                    <li data-id="1">
+                        <img src="/assets/lampadas.svg" alt="lâmpadas">
+                        <span>Lâmpadas</span>
+                    </li>
+                    <li data-id="2">
+                        <img src="/assets/baterias.svg" alt="pilhas e baterias">
+                        <span>Pilhas e Baterias</span>
+                    </li>
+                    <li data-id="3">
+                        <img src="/assets/papeis-papelao.svg" alt="papéis e papelão">
+                        <span>Papéis e Papelão</span>
+                    </li>
+                    <li data-id="4">
+                        <img src="/assets/eletronicos.svg" alt="resíduos Eletrônicos">
+                        <span>Resíduos Eletrônicos</span>
+                    </li>
+                    <li data-id="5">
+                        <img src="/assets/organicos.svg" alt="resíduos Orgânicos">
+                        <span>Resíduos Orgânicos</span>
+                    </li>
+                    <li data-id="6">
+                        <img src="/assets/oleo.svg" alt="Óleo de Cozinha">
+                        <span>Óleo de Cozinha</span>
+                    </li>
+                </div>
+                <input type="hidden" name="items">
             </fieldset>
             <button type="submit">Cadastrar ponto de coleta</button>
         </form>

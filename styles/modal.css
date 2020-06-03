@@ -1,0 +1,75 @@
+#modal{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+}
+
+#modal .content{
+    width: 420px;
+    color: aliceblue;
+}
+
+#modal .content .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+#modal .content .header a{
+    background-image: url('../assets/x.svg');
+    width: 20px;
+    height: 20px;
+    font-size: 0.01px;
+    display: flex;
+}
+
+#modal .content .header h2{
+    color: aliceblue;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+#modal .content form label{
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#modal .content form .search-field{
+    display: flex;
+}
+#modal .content form .search-field input{
+    flex: 1;
+    background-color: #f0f0f5;
+    border: 0;
+    border-radius: 8px 0px 0px 8px;
+    padding: 16px 24px;
+    font-size: 18px;
+    color: #6c6c80;
+}
+
+#modal .content form .search-field button{
+    width: 72px;
+    height: 72px;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 0px 8px 8px 0px;
+    cursor: pointer;
+    transition: 400ms;
+}
+#modal .content form .search-field button:hover{
+    background-color: #2fb85e;
+}
+
+#modal.hidden{
+    display: none;
+}

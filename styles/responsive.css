@@ -8,13 +8,32 @@
     }
 
     #home-page .content header a{
-        position: absolute;
-        bottom: 48px;
-        left: 50%;
-        transform: translateX(-50%);
+        display: none;
     }
     #home-page .content main{
         align-items: center;
+    }
+    #link-footer{
+        display: flex;
+        margin: 20px 0;
+    }
+
+    #search-results-page main .cards{
+        grid-template-columns: 1fr;
+        margin-bottom: 32px;
+    }
+    html{
+        position: relative;
+    }
+
+    form fieldset + fieldset div.items-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    form .field-group{
+        flex-direction: column;
+    }
+    form .field-group .field + .field{
+        margin-left: 0;
     }
 }
 
@@ -27,5 +46,33 @@
 @media (max-height: 800px){
     #home-page{
         background-position-y: 200px;
+    }
+}
+
+@media(max-width: 400px){
+    form fieldset + fieldset div.items-grid{
+        grid-template-columns: 1fr;
+    }
+    form{
+        padding: 10px;
+        margin: 20px auto;
+    }
+    form button{
+        float: none;
+        width: 100%;
+    } 
+
+    #modal{
+        height: 115vh;
+    }
+    #modal .content{
+        width: 100%;
+    }
+    #home-page main{
+        width: 90%;
+    }
+    #home-page main h1{
+        width: 90%;
+        font-size: 40px;
     }
 }

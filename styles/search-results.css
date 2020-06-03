@@ -1,0 +1,85 @@
+
+
+body::after{
+    content: "";
+    position: absolute;
+    top: 300px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    z-index: -1;
+}
+
+#search-results-page{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#search-results-page header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#search-results-page header a{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+#search-results-page header a span{
+    background: url('../assets/arrow-left.svg');
+    height: 24px;
+    width: 20px;
+    display: flex;
+    margin-right: 16px;
+}
+
+#search-results-page main{
+    margin-top: 48px;
+}
+
+#search-results-page h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin-bottom: 36px;
+    color: #6c6c80;
+}
+#search-results-page main .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+#search-results-page main .cards .card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+#search-results-page main .cards .card h2{
+    font-size: 36px;
+    line-height: 41px;
+    margin-top: 32px;
+}
+
+#search-results-page main .cards .card h3{
+    width: 70%;
+    margin: 24px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+#search-results-page main .cards .card p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #6c6c80;
+    width: 80%;
+}
+

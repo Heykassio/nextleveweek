@@ -31,10 +31,10 @@ form{
     background-color: white;
     padding: 64px;
     border-radius: 8px;
-    margin: 0 auto;
-    margin-top: 80px;
+    margin: 80px auto;
     max-width: 730px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 form h1{
     font-size: 36px;
@@ -46,6 +46,12 @@ form fieldset{
 
 form legend{
     margin-bottom: 40px;
+}
+form fieldset + fieldset legend{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 form legend h2{
@@ -92,6 +98,8 @@ form .field-group .field + .field{
     max-width: 150px;
 }
 
+
+
 form button{
     width: 260px;
     height: 56px;
@@ -104,21 +112,52 @@ form button{
     margin-top: 46px;
     cursor: pointer;
     transition: background-color 400ms;
+    float: right;
 }
 
 form button:hover{
     background-color: #2fb86e;
 }
-/* form button{
-    width: 100%;
-    max-width: 200px;
-    background: var(--primary-color);
-    height: 50px;
+
+
+/* ** GRID DE ITEMS ** */
+
+form fieldset + fieldset div.items-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+form fieldset + fieldset div.items-grid li{
+    list-style: none; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    border: 2px solid #F5F5F5;
     border-radius: 8px;
+    height: 180px;
+    padding: 32px 24px 16px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+form fieldset + fieldset div.items-grid li.selected{
+    background-color: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+form fieldset + fieldset div.items-grid li span{
+    flex: 1;
     display: flex;
     align-items: center;
-    margin-top: 40px;
-    transition: 400ms;
-    color: aliceblue;
-    font-weight: bold;
-} */
+    margin-top: 12px;
+    color: var(--title-color);
+}
+
+form fieldset + fieldset div.items-grid li span,
+form fieldset + fieldset div.items-grid li img{
+    pointer-events: none;
+}
