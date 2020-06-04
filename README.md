@@ -13,3 +13,5 @@ e rápido o correto descarte desses resíduos.
 O site foi desenvolvido sem o useo de frameworks ou libs como bootstrap, apenas usando html, css e javascript
 
 Ao final da aula 3, consegui adicionar responsividade ao projeto e gostei muito do resultado final  :smiley:
+
+![](assets/20200603_195705.gif)
