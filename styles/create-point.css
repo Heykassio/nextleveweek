@@ -142,7 +142,114 @@ form fieldset + fieldset div.items-grid li{
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
+    transition: 0.5s;
+    position: relative;
 }
+
+form fieldset + fieldset div.items-grid li::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+form fieldset + fieldset div.items-grid li:hover::before{
+    animation: animate 1s linear forwards;
+}
+form fieldset + fieldset div.items-grid li.selected:hover::before{
+    display: none;
+}
+
+@keyframes animate{
+    0%
+    {
+       width: 0;
+       height: 0;
+       border-top-color: #34cb79 ; 
+       border-bottom-color: transparent; 
+       border-right-color: transparent; 
+       border-left-color: transparent; 
+
+    }
+    50%
+    {
+        width: 100%;
+        height: 0%;
+        border-top-color: #34cb79; 
+        border-bottom-color: transparent; 
+        border-right-color: #34cb79; 
+        border-left-color: transparent; 
+ 
+     }
+     100%{
+        width: 100%;
+        height: 100%;
+        border-top-color: #34cb79 ; 
+        border-bottom-color: transparent; 
+        border-right-color: #34cb79; 
+        border-left-color: transparent; 
+ 
+     }
+}
+
+form fieldset + fieldset div.items-grid li::after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+
+form fieldset + fieldset div.items-grid li:hover::after{
+    animation: animate2 1s linear forwards;
+}
+
+form fieldset + fieldset div.items-grid li.selected:hover::after{
+    display: none;
+}
+
+@keyframes animate2{
+    0%
+    {
+       width: 0;
+       height: 0;
+       border-top-color: transparent ; 
+       border-bottom-color: #34cb79; 
+       border-right-color: transparent; 
+       border-left-color: transparent; 
+
+    }
+    50%
+    {
+        width: 100%;
+        height: 0%;
+        border-top-color: transparent; 
+        border-bottom-color: #34cb79; 
+        border-right-color: transparent; 
+        border-left-color: #34cb79; 
+ 
+     }
+     100%{
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent ; 
+        border-bottom-color: #34cb79; 
+        border-right-color: transparent; 
+        border-left-color: #34cb79; 
+ 
+     }
+}
+
 
 form fieldset + fieldset div.items-grid li.selected{
     background-color: #e1faec;
