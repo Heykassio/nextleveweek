@@ -14,4 +14,4 @@ O site foi desenvolvido sem o useo de frameworks ou libs como bootstrap, apenas 
 
 Ao final da aula 3, consegui adicionar responsividade ao projeto e gostei muito do resultado final  :smiley:
 
-![](assets/20200603_195705.gif)
+![](public/assets/20200603_195705.gif)
