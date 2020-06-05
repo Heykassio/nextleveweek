@@ -75,4 +75,10 @@
         width: 90%;
         font-size: 40px;
     }
+    #create-point-page header a span{
+        margin-right: 3px;
+    }
+    #search-results-page header a span{
+        margin-right: 3px;
+    }
 }
