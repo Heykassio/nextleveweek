@@ -2,6 +2,8 @@ const express = require('express');
 const server = express();
 const nunjucks = require('nunjucks');
 
+const port = normalizePort(process.env.PORT || '4000');
+
 server.use(express.static('public'));
 
 nunjucks.configure('src/views', {
@@ -22,4 +24,16 @@ server.get('/search', (req, res)=>{
     return res.render(`search-results.html`);
 });
 
-server.listen(3000);
+server.listen(port);
+
+function normalizePort(val){
+    const port = parseInt(val, 10);
+
+    if(isNaN(port)){
+        return val;
+    }
+    if(port>=0){
+        return port;
+    }
+    return false;
+}
