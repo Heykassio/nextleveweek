@@ -68,7 +68,7 @@ module.exports = db;
     });    
 
 });*/
-// db.run(`DELETE FROM places WHERE id= ?`, [6], function(error){
+// db.run(`DELETE FROM places`, function(error){
 //     if(error){
 //         return console.log(error);
 //     };
