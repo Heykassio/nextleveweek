@@ -56,6 +56,10 @@ server.post('/savepoint', (req, res)=>{
 server.post('/search', (req, res)=>{
     const {search} = req.body;
 
+    if(search == ""){
+        return res.render(`search-results.html`, {places: null});
+    };
+
     db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(error, rows){
         if(error){
             return console.log(error);
