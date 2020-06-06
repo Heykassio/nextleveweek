@@ -15,28 +15,24 @@
 {% block content %}
     {%include 'partials/page-header.html'%}        
         <main>
-            <h4><strong>2 pontos</strong> encontrados</h4>
+            {% if places.length >0 %}
+            <h4><strong>{{places.length}} ponto(s)</strong> encontrado(s)</h4>
             <div class="cards">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="colectoria">
-                    <h2>Colectoria</h2>
-                    <h3>Resíduos eletrônicos, Lâmpadas</h3>
-                    <p>
-                        Rio do Sul, Santa Catarina <br>
-                        Guilherme Gembella, Jardim América
-                        Número 260
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1401&q=80" alt="Papersider">
-                    <h2>Papersider</h2>
-                    <h3>Resíduos eletrônicos, Lâmpadas</h3>
-                    <p>
-                        Rio do Sul, Santa Catarina <br>
-                        Guilherme Gembella, Jardim América
-                        Número 260
-                    </p>
-                </div>
+                {%for place in places%}
+                    <div class="card">
+                        <img src="{{place.image}}" alt="{{place.name}}">
+                        <h2>{{place.name}}</h2>
+                        <h3>{{place.items}}</h3>
+                        <p>
+                            {{place.city}}, {{place.state}} <br>
+                            {{place.address}}
+                            {{place.address2}}
+                        </p>
+                    </div>
+                {%endfor%}
             </div>
+            {% else %}
+            <h4><strong>Nenhum</strong> local encontrado</h4>
+            {%endif%}
         </main>
 {% endblock content %}
